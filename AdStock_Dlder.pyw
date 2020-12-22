@@ -131,16 +131,16 @@ class App():
                 self.cansv.after(3000,yo)
     
     def download(self,event):
-        def dissipation():
+        def disspation():
             self.cansv.itemconfig(self.complete,state=HIDDEN)
             self.cansv.itemconfig(self.sontdisp,text="")
             self.cansv.itemconfig(self.combien,text="")
             self.cansv.itemconfig(self.combien2,state=HIDDEN)
             self.cansv.itemconfig(self.checkb,state=HIDDEN)
-
+        
         limite=int(self.entree3.get())
         download_pic(self.liste,limite,self.dossier,self.recherche)
         self.cansv.itemconfig(self.complete,state=NORMAL)
-        self.cansv.after(3000,dissipation)
+        self.cansv.after(3000,disspation)
     
 hey=App()
